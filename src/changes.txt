@@ -1,0 +1,20 @@
+1. Функция обработки события скролл 
+определяет был ли скролл вниз или вверх. В зависимости от этого меняется индекс элемента в заголовке
+contacts.addEventListener("scroll", (e) => {
+    const items = Array.from(contacts.getElementsByClassName("contact"));
+    сurrIndex = contacts.scrollTop - prevScroll >= 0 ? currIndex+=3 : currIndex-=3
+    stickyHeader.textContent = items[currIndex].textContent;
+    prevScroll = contacts.scrollTop
+  });
+
+2. Добавляем свойство will-change: transform
+  .stickyHeader {
+  will-change: transform;
+  }
+  .contacts {
+    will-change: transform;
+}
+3. Загружаем скрипты через async
+<script async src="stats.js"></script>
+<script async src="contacts.js"></script> 
+4. Оптимально было бы использовать виртуальный скроллинг, но на нативном js сложновато в реализации
