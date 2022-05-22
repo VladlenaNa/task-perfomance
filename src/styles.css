@@ -4,6 +4,7 @@
     overflow-y: scroll;
     height: 300px;
     position: relative;
+    will-change: transform;
 }
 
 .contact {
@@ -11,6 +12,7 @@
 }
 
 .stickyHeader {
+    will-change: transform;
     position: sticky;
     top: 0;
     background-color: #000;
